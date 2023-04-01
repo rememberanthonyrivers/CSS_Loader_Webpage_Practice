@@ -1,0 +1,49 @@
+* {
+    background-color: red;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.loading {
+    /* code to center div in the direct
+    middle of the page */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.loading__anim {
+    width: 35px;
+    height: 35px;
+    /* the below line makes sure that the loader is
+    on its own seperate line */
+    display: inline-block;
+
+    border: 5px solid yellow;
+    /* since everything in html is a box,
+    lets color and round the sides of our box */
+    border-left-color: green;
+    border-top-color: green;
+    border-radius: 50%;
+}
+
+/* lets write the code to animate our div */
+/* 1turn is equal to 360deg ,
+ that is a complete turn rotates 
+ 360 degrees. */
+@keyframes rotate {
+    to {
+        transform: rotate(1turn)
+    }
+}
+
+/* now lets animate our div */
+.loading__anim {
+    animation: rotate 600ms infinite linear;
+}
